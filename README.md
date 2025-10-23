@@ -1,4 +1,3 @@
-# hapivet-ai-scheduler-prototype
 # 🐾 HapiVet – AI Appointment Scheduler Prototype
 
 ## 1. Problem Statement
