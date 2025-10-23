@@ -133,7 +133,7 @@ The bot communicates with the **AI Scheduler backend**, checks doctor availabili
 ---
 
 ## 4. How to Run Locally
-```bash
+
 cd backend
 pip install -r requirements.txt
 uvicorn app:app --reload --host 0.0.0.0 --port 8000
