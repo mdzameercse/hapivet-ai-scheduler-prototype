@@ -1,6 +1,6 @@
 # 🐾 HapiVet – AI Appointment Scheduler Prototype
 
-🧠 ##Problem Statement
+🧠 ## Problem Statement
 
 Currently, the veterinary scheduling and task management system is handled manually.
 Doctors’ availability, appointment prioritization, and communication with clients are all managed by human staff, which often leads to:
