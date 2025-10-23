@@ -1,4 +1,4 @@
-# 🐾 HapiVet – AI Appointment Scheduler Prototype
+carefully obser error in code or screen shots missing not at correct directory # 🐾 HapiVet – AI Appointment Scheduler Prototype
 
 # 🧠 PROBLEM STATEMENT
 
@@ -91,18 +91,20 @@ The bot communicates with the **AI Scheduler backend**, checks doctor availabili
 - 📞 **Call links (for Very Urgent)**  
 - 🔔 **Notifications (for Urgent)**  
 - 🔁 **Reschedule alerts (for Normal)**
-
 ---
 
 # 🖥️ OUTPUT PREVIEW
 
 | **Appointment Type** | **Action Performed by System** |
 |-----------------------|--------------------------------|
-| Normal Appointment | Schedules for next day (visible to doctor in dashboard) |
-| Urgent Appointment | Notifies available doctor for 2-4 hours slot |
-| Very Urgent Appointment | Generates instant Jitsi Meet call link and connects doctor immediately |
+| 🐾 **Normal Appointment** | Schedules for next day (visible to doctor in dashboard) |
+| ⚡ **Urgent Appointment** | Notifies available doctor for 2–4 hours slot |
+| 🚨 **Very Urgent Appointment** | Generates instant **Jitsi Meet call link** and connects doctor immediately |
 
 ---
+## 🧭 AI APPOINTMENT SCHEDULING & CALLING WORKFLOW
+
+```mermaid
 
 ## 🧭 AI APPOINTMENT SCHEDULING & CALLING WORKFLOW
 flowchart TD
@@ -114,7 +116,7 @@ B --> C2[Urgent Appointment (2-4 hours)]
 B --> C3[Very Urgent (Immediate 0-1 hour)]
 
 %% --- Normal Appointment Flow ---
-C1 --> D1[AI Scheduler checks doctors' schedules]
+C1 --> D1[AI Scheduler checks doctors schedules]
 D1 --> E1[Assign slot 1-2 days later]
 E1 --> F1[Doctor sees appointment in dashboard]
 F1 --> G1[Doctor can Accept or Reject before a day]
@@ -138,7 +140,8 @@ F3 --> G3{Doctor answers?}
 G3 -->|Yes| H3[Connect doctor and user instantly]
 G3 -->|No| I3[Try next available doctor (loop)]
 H3 --> J3[Notify both with call link]
-I3 --> F3
+
+I3 --> F3  %% loop back if doctor not available
 
 J3 --> K[Emergency consultation handled instantly]
 
@@ -146,6 +149,7 @@ J3 --> K[Emergency consultation handled instantly]
 I1 --> Z[AI Scheduler maintains log and updates DB]
 I2 --> Z
 K --> Z
+
 
 ## 🧩 Technologies Proposed
 
@@ -198,4 +202,3 @@ Here are sample screenshots from the prototype demonstrating the AI Chatbot and 
 
 ### Doctor Dashboard View
 ![Doctor Dashboard](screenshots/normal_schedule.png)
-
