@@ -91,7 +91,6 @@ The bot communicates with the **AI Scheduler backend**, checks doctor availabili
 - 📞 **Call links (for Very Urgent)**  
 - 🔔 **Notifications (for Urgent)**  
 - 🔁 **Reschedule alerts (for Normal)**
-
 ---
 
 # 🖥️ OUTPUT PREVIEW
@@ -103,6 +102,48 @@ The bot communicates with the **AI Scheduler backend**, checks doctor availabili
 | 🚨 **Very Urgent Appointment** | Generates instant **Jitsi Meet call link** and connects doctor immediately |
 
 ---
+flowchart TD
+
+A[🐾 User Opens Chatbot] --> B[Chooses Appointment Type]
+
+B --> C1[Normal Appointment (1–2 days)]
+B --> C2[Urgent Appointment (2–4 hours)]
+B --> C3[Very Urgent (Immediate 0–1 hour)]
+
+%% --- Normal Appointment Flow ---
+C1 --> D1[AI Scheduler checks doctors' schedules]
+D1 --> E1[Assign slot 1–2 days later]
+E1 --> F1[Doctor sees appointment in dashboard]
+F1 --> G1[Doctor can Accept/Reject before a day]
+G1 --> H1[If Rejected → AI reschedules to another doctor]
+H1 --> I1[✅ Confirmation message to user]
+
+%% --- Urgent Appointment Flow ---
+C2 --> D2[AI Scheduler checks next 2–4 hr availability]
+D2 --> E2[Send notification to available doctors]
+E2 --> F2[Doctor Accepts?]
+F2 -->|Yes| G2[✅ Confirm booking & notify user]
+F2 -->|No| H2[AI sends request to next available doctor]
+H2 --> G2
+G2 --> I2[📅 Appointment set in current-day schedule]
+
+%% --- Very Urgent Flow ---
+C3 --> D3[AI checks doctor working hours & availability]
+D3 --> E3[Generate instant Jitsi Meet link]
+E3 --> F3[Initiate call to first available doctor]
+F3 --> G3[Doctor answers?]
+G3 -->|Yes| H3[📞 Connect doctor & user instantly]
+G3 -->|No| I3[Try next available doctor (loop)]
+H3 --> J3[✅ Notify both with call link]
+
+I3 --> F3  %% loop back if doctor not available
+
+J3 --> K[Emergency consultation handled instantly]
+
+%% --- End ---
+I1 --> Z[🎯 AI Scheduler maintains log & updates DB]
+I2 --> Z
+K --> Z
 
 ## 🧩 Technologies Proposed
 
