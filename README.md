@@ -1,6 +1,6 @@
 # 🐾 HapiVet – AI Appointment Scheduler Prototype
 
-🧠 Problem Statement
+🧠 ##Problem Statement
 
 Currently, the veterinary scheduling and task management system is handled manually.
 Doctors’ availability, appointment prioritization, and communication with clients are all managed by human staff, which often leads to:
@@ -13,13 +13,13 @@ Lack of real-time communication between clients and veterinarians.
 
 Manual errors in booking and follow-up tracking.
 
-💡 Proposed AI-Driven Solution
+💡 ##Proposed AI-Driven Solution
 
 We propose an AI-enabled chatbot-based appointment scheduling system that automates the entire workflow — especially focusing on AI-assisted calling and immediate doctor connection in critical cases.
 
 The system categorizes consultations into three urgency levels and handles them intelligently:
 
-🚨 1. Very Urgent Case (Immediate: 0 – 1 hour)
+🚨 #1. Very Urgent Case (Immediate: 0 – 1 hour)
 
 Scenario: The pet is in an emergency condition that needs immediate attention.
 
@@ -31,7 +31,7 @@ The AI scheduler checks the doctor dataset to identify doctors who are currently
 
 The system immediately initiates a call connection (via a free service such as Jitsi Meet).
 
-The bot says:
+#The bot says:
 
 “Connecting you with the nearest available veterinarian for emergency support.”
 
@@ -44,7 +44,7 @@ Once connected, both doctor and user receive instant call links and notification
 Key Goal:
 Minimize response time to seconds and save lives during emergencies.
 
-⚡ 2. Urgent Case (2 – 4 hours window)
+⚡ #2. Urgent Case (2 – 4 hours window)
 
 Scenario: The pet needs quick medical attention, but not an immediate emergency.
 
@@ -65,7 +65,7 @@ If all doctors are busy, AI slightly adjusts the time slot and retries.
 Key Goal:
 Ensure that urgent cases are scheduled within the same day without manual coordination.
 
-🕐 3. Normal Case (1 – 2 days)
+🕐# 3. Normal Case (1 – 2 days)
 
 Scenario: Routine check-ups, vaccinations, or follow-up visits.
 
@@ -86,7 +86,7 @@ User gets a reschedule notification automatically — no manual calls needed.
 Key Goal:
 Automate regular appointments efficiently and reduce administrative workload.
 
-🤖 Chatbot as Central Interface
+🤖 #Chatbot as Central Interface
 
 The chatbot acts as the main entry point for users.
 It doesn’t require typing — only button-based selections for simplicity:
