@@ -148,10 +148,10 @@ Here are sample screenshots from the prototype demonstrating the AI Chatbot and 
 ## 🖼️ PROJECT SCREENSHOTS
 
 ### Chatbot Interface
-![Chatbot UI](screenshots/chatbot_ui.png)
+![Chatbot UI](assets/screenshots/chatbot_ui.png)
 
 ### Urgent Scheduling Flow
-![Urgent Flow](screenshots/urgent_flow.png)
+![Urgent Flow](assets/screenshots/urgent_flow.png)
 
 ### Doctor Dashboard View
-![Doctor Dashboard](screenshots/normal_schedule.png)
+![Doctor Dashboard](assets/screenshots/normal_schedule.png)
