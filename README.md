@@ -10,7 +10,13 @@ Our solution automates the scheduling system using AI to categorize appointments
 - **Very Urgent (Immediate, 0–1 hour)**
 
 The chatbot automatically connects users with available doctors, reschedules rejected slots, and handles instant video (Normal) calls using Jitsi Meet API.
+Output Preview
 
+Normal Appointment: Schedules for next day
+
+Urgent Appointment: Notifies doctor for 2–4 hours slot
+
+Very Urgent Appointment: Generates instant Jitsi Meet call link
 ---
 
 ## 2. Tools & Technologies Used
