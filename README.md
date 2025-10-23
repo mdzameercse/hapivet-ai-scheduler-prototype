@@ -107,14 +107,24 @@ Notifications (for Urgent)
 
 Reschedule alerts (for Normal)
 
-🧩 Technologies Proposed
-Function	Suggested Technology	Free / Integration
-Chatbot Interface	Botpress / Rasa / Microsoft Bot Framework	Free tier
-Scheduling Logic	Python (FastAPI backend)	Open source
-Database	Firebase / MongoDB Atlas	Free tier
-Calling & Video Consult	Jitsi Meet API	Free & instant
-Notifications	Firebase Cloud Messaging / Email	Free tier
-Hosting	Render / Azure Free Tier	Free deployment
+## 🧩 Technologies Proposed
+
+| **Function** | **Suggested Technology** | **Free / Integration** |
+|---------------|---------------------------|-------------------------|
+| 💬 Chatbot Interface | Botpress / Rasa / Microsoft Bot Framework | Free tier |
+| 🧠 Scheduling Logic | Python (FastAPI backend) | Open source |
+| 🗄️ Database | Firebase / MongoDB Atlas | Free tier |
+| 📞 Calling & Video Consult | Jitsi Meet API | Free & instant |
+| 🔔 Notifications | Firebase Cloud Messaging / Email | Free tier |
+| ☁️ Hosting | Render / Azure Free Tier | Free deployment |
+
+🎯 Key Benefits
+
+✅ Zero manual scheduling — completely automated workflow.
+✅ Real-time doctor availability tracking.
+✅ Emergency “call now” feature through AI-driven routing.
+✅ Efficient use of doctors’ working hours.
+✅ Scalable and modular for future AI learning (predictive load balancing).
 
 ---
 
