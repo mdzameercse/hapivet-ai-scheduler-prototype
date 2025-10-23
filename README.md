@@ -106,6 +106,13 @@ Call links (for Very Urgent)
 Notifications (for Urgent)
 
 Reschedule alerts (for Normal)
+Output Preview
+
+Normal Appointment: Schedules for next day
+
+Urgent Appointment: Notifies doctor for 2–4 hours slot
+
+Very Urgent Appointment: Generates instant Jitsi Meet call link
 
 ## 🧩 Technologies Proposed
 
