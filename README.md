@@ -121,7 +121,7 @@ Hosting	Render / Azure Free Tier	Free deployment
 ## 3. Code & Team Details
 **Team Name:** Pulse  
 
-**Repository:** [GitHub link to this repo]
+**Repository:** https://github.com/mdzameercse/hapivet-ai-scheduler-prototype
 
 ---
 
