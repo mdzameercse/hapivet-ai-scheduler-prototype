@@ -148,10 +148,11 @@ Here are sample screenshots from the prototype demonstrating the AI Chatbot and 
 ## 🖼️ PROJECT SCREENSHOTS
 
 ### Chatbot Interface
-![Chatbot UI](https://raw.githubusercontent.com/mdzameercse/hapivet-ai-scheduler-prototype/main/assets/screenshots/chatbot_ui.png)
+<img src="https://raw.githubusercontent.com/mdzameercse/hapivet-ai-scheduler-prototype/main/assets/screenshots/chatbot_ui.png" alt="Chatbot UI" width="400"/>
 
 ### Urgent Scheduling Flow
-![Urgent Flow](https://raw.githubusercontent.com/mdzameercse/hapivet-ai-scheduler-prototype/main/assets/screenshots/urgent_flow.png)
+<img src="https://raw.githubusercontent.com/mdzameercse/hapivet-ai-scheduler-prototype/main/assets/screenshots/urgent_flow.png" alt="Urgent Flow" width="400"/>
 
 ### Doctor Dashboard View
-![Doctor Dashboard](https://raw.githubusercontent.com/mdzameercse/hapivet-ai-scheduler-prototype/main/assets/screenshots/normal_schedule.png)
+<img src="https://raw.githubusercontent.com/mdzameercse/hapivet-ai-scheduler-prototype/main/assets/screenshots/normal_schedule.png" alt="Doctor Dashboard" width="400"/>
+
