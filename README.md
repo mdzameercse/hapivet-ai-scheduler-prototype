@@ -105,8 +105,6 @@ The bot communicates with the **AI Scheduler backend**, checks doctor availabili
 ---
 
 ## 🧭 AI APPOINTMENT SCHEDULING & CALLING WORKFLOW
-
-```mermaid
 flowchart TD
 
 A[User Opens Chatbot] --> B[Chooses Appointment Type]
@@ -140,14 +138,16 @@ F3 --> G3{Doctor answers?}
 G3 -->|Yes| H3[Connect doctor and user instantly]
 G3 -->|No| I3[Try next available doctor (loop)]
 H3 --> J3[Notify both with call link]
+I3 --> F3
 
-I3 --> F3  %% loop back if doctor not available
 J3 --> K[Emergency consultation handled instantly]
 
 %% --- End ---
 I1 --> Z[AI Scheduler maintains log and updates DB]
 I2 --> Z
 K --> Z
+
+```mermaid
 
 
 
@@ -194,5 +194,12 @@ Here are sample screenshots from the prototype demonstrating the AI Chatbot and 
 3. 📞 Very urgent case call popup  
 ## 🖼️ PROJECT SCREENSHOTS
 
+### Chatbot Interface
+![Chatbot UI](screenshots/chatbot_ui.png)
 
+### Urgent Scheduling Flow
+![Urgent Flow](screenshots/urgent_flow.png)
+
+### Doctor Dashboard View
+![Doctor Dashboard](screenshots/normal_schedule.png)
 
