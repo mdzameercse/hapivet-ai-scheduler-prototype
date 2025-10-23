@@ -147,10 +147,6 @@ I1 --> Z[AI Scheduler maintains log and updates DB]
 I2 --> Z
 K --> Z
 
-```mermaid
-
-
-
 ## 🧩 Technologies Proposed
 
 | **Function** | **Suggested Technology** | **Free / Integration** |
