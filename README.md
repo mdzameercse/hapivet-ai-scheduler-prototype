@@ -102,6 +102,9 @@ The bot communicates with the **AI Scheduler backend**, checks doctor availabili
 | 🚨 **Very Urgent Appointment** | Generates instant **Jitsi Meet call link** and connects doctor immediately |
 
 ---
+## 🧭 AI APPOINTMENT SCHEDULING & CALLING WORKFLOW
+
+```mermaid
 flowchart TD
 
 A[🐾 User Opens Chatbot] --> B[Chooses Appointment Type]
@@ -145,6 +148,7 @@ I1 --> Z[🎯 AI Scheduler maintains log & updates DB]
 I2 --> Z
 K --> Z
 
+
 ## 🧩 Technologies Proposed
 
 | **Function** | **Suggested Technology** | **Free / Integration** |
@@ -178,3 +182,22 @@ K --> Z
 cd backend
 pip install -r requirements.txt
 uvicorn app:app --reload --host 0.0.0.0 --port 8000
+
+## 📸 VISUAL PREVIEW
+
+Here are sample screenshots from the prototype demonstrating the AI Chatbot and Scheduling system:
+
+1. 🗨️ Chatbot conversation interface  
+2. ⚡ Urgent scheduling notification  
+3. 📞 Very urgent case call popup  
+## 🖼️ PROJECT SCREENSHOTS
+
+### Chatbot Interface
+![Chatbot UI](screenshots/chatbot_ui.png)
+
+### Urgent Scheduling Flow
+![Urgent Flow](screenshots/urgent_flow.png)
+
+### Doctor Dashboard View
+![Doctor Dashboard](screenshots/normal_schedule.png)
+
