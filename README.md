@@ -1,4 +1,4 @@
-carefully obser error in code or screen shots missing not at correct directory # 🐾 HapiVet – AI Appointment Scheduler Prototype
+# 🐾 HapiVet – AI Appointment Scheduler Prototype
 
 # 🧠 PROBLEM STATEMENT
 
