@@ -1,118 +1,108 @@
 # 🐾 HapiVet – AI Appointment Scheduler Prototype
 
-🧠 ## Problem Statement
+# 🧠 PROBLEM STATEMENT
 
-Currently, the veterinary scheduling and task management system is handled manually.
+Currently, the **veterinary scheduling and task management system** is handled **manually**.  
 Doctors’ availability, appointment prioritization, and communication with clients are all managed by human staff, which often leads to:
 
-Delays in attending urgent or emergency cases.
+- ⚠️ **Delays in attending urgent or emergency cases**
+- ⚖️ **Uneven workload distribution among doctors**
+- 💬 **Lack of real-time communication between clients and veterinarians**
+- 🧾 **Manual errors in booking and follow-up tracking**
 
-Uneven workload distribution among doctors.
+---
 
-Lack of real-time communication between clients and veterinarians.
+# 💡 PROPOSED AI-DRIVEN SOLUTION
 
-Manual errors in booking and follow-up tracking.
-
-💡 ##Proposed AI-Driven Solution
-
-We propose an AI-enabled chatbot-based appointment scheduling system that automates the entire workflow — especially focusing on AI-assisted calling and immediate doctor connection in critical cases.
+We propose an **AI-enabled chatbot-based appointment scheduling system** that automates the entire workflow — especially focusing on **AI-assisted calling** and **immediate doctor connection** in critical cases.
 
 The system categorizes consultations into three urgency levels and handles them intelligently:
 
-🚨 #1. Very Urgent Case (Immediate: 0 – 1 hour)
+---
 
-Scenario: The pet is in an emergency condition that needs immediate attention.
+## 🚨 1. VERY URGENT CASE (IMMEDIATE: 0–1 HOUR)
 
-AI Workflow:
+**Scenario:**  
+The pet is in an emergency condition that needs immediate attention.
 
-The user opens the chatbot and selects “Very Urgent.”
+### 🧩 AI WORKFLOW:
+1. The user opens the chatbot and selects **“Very Urgent.”**  
+2. The **AI Scheduler** checks the **doctor dataset** to identify doctors who are **currently within their working hours** and **free** (not consulting another case).  
+3. The system immediately initiates a **call connection** (via a free service such as **Jitsi Meet**).  
+4. The bot says:  
+   > “Connecting you with the nearest available veterinarian for emergency support.”  
+5. If the first doctor **doesn’t respond within 30 seconds**, the AI automatically tries the **next available doctor**.  
+6. This loop continues until a doctor **accepts the call**.  
+7. Once connected, both doctor and user receive **instant call links and notifications**.
 
-The AI scheduler checks the doctor dataset to identify doctors who are currently within their working hours and free (not consulting another case).
+**🎯 KEY GOAL:**  
+👉 Minimize response time to **seconds** and **save lives during emergencies**.
 
-The system immediately initiates a call connection (via a free service such as Jitsi Meet).
+---
 
-#The bot says:
+## ⚡ 2. URGENT CASE (2–4 HOURS WINDOW)
 
-“Connecting you with the nearest available veterinarian for emergency support.”
+**Scenario:**  
+The pet needs quick medical attention, but not an immediate emergency.
 
-If the first doctor doesn’t respond within 30 seconds, the AI automatically tries the next available doctor.
+### 🧩 AI WORKFLOW:
+1. User selects **“Urgent Appointment.”**  
+2. The **AI Scheduler** checks for doctors with **available slots** in the next **2–4 hours**.  
+3. The system sends **notification requests** to available doctors, showing the proposed time.  
+4. If the first doctor **accepts**, the appointment is **confirmed** and updated in the system.  
+5. If the doctor **rejects** (busy or unavailable), the AI automatically forwards the request to the **next available doctor**.  
+6. If all doctors are busy, the AI **adjusts the time slot** and retries automatically.
 
-This loop continues until a doctor accepts the call.
+**🎯 KEY GOAL:**  
+👉 Ensure that **urgent cases** are **scheduled within the same day** without manual coordination.
 
-Once connected, both doctor and user receive instant call links and notifications.
+---
 
-Key Goal:
-Minimize response time to seconds and save lives during emergencies.
+## 🕐 3. NORMAL CASE (1–2 DAYS)
 
-⚡ #2. Urgent Case (2 – 4 hours window)
+**Scenario:**  
+Routine check-ups, vaccinations, or follow-up visits.
 
-Scenario: The pet needs quick medical attention, but not an immediate emergency.
+### 🧩 AI WORKFLOW:
+1. User selects **“Normal Appointment.”**  
+2. The AI Scheduler allocates a slot **1–2 days later** based on the doctor’s normal working schedule.  
+3. The appointment is automatically visible in the **doctor’s dashboard**.  
+4. A day before, the doctor can **accept** or **reject** any slot.  
+5. If a doctor **rejects**, the AI reassigns the booking to another available doctor.  
+6. The user gets a **reschedule notification automatically** — no manual calls needed.
 
-AI Workflow:
+**🎯 KEY GOAL:**  
+👉 Automate regular appointments efficiently and **reduce administrative workload**.
 
-User selects “Urgent Appointment.”
+---
 
-AI scheduler checks for doctors with available slots in the next 2–4 hours.
+# 🤖 CHATBOT AS CENTRAL INTERFACE
 
-The system sends notification requests to available doctors, showing the proposed time.
+The **chatbot** acts as the **main entry point** for all users.  
+It doesn’t require typing — only **button-based selections** for simplicity:
 
-If the first doctor accepts, the appointment is confirmed and updated in the system.
+- 🐾 **Normal Appointment**
+- ⚡ **Urgent Appointment**
+- 🚨 **Very Urgent (Call Now)**
 
-If the doctor rejects (busy or unavailable), the AI automatically forwards the request to the next available doctor.
+The bot communicates with the **AI Scheduler backend**, checks doctor availability, and returns:
 
-If all doctors are busy, AI slightly adjusts the time slot and retries.
+- ✅ **Confirmation messages**  
+- 📞 **Call links (for Very Urgent)**  
+- 🔔 **Notifications (for Urgent)**  
+- 🔁 **Reschedule alerts (for Normal)**
 
-Key Goal:
-Ensure that urgent cases are scheduled within the same day without manual coordination.
+---
 
-🕐# 3. Normal Case (1 – 2 days)
+# 🖥️ OUTPUT PREVIEW
 
-Scenario: Routine check-ups, vaccinations, or follow-up visits.
+| **Appointment Type** | **Action Performed by System** |
+|-----------------------|--------------------------------|
+| 🐾 **Normal Appointment** | Schedules for next day (visible to doctor in dashboard) |
+| ⚡ **Urgent Appointment** | Notifies available doctor for 2–4 hours slot |
+| 🚨 **Very Urgent Appointment** | Generates instant **Jitsi Meet call link** and connects doctor immediately |
 
-AI Workflow:
-
-User selects “Normal Appointment.”
-
-AI scheduler allocates a slot 1–2 days later based on the doctor’s normal working schedule.
-
-The appointment is automatically visible in the doctor’s dashboard.
-
-A day before, the doctor can accept or reject any slot.
-
-If a doctor rejects, the AI reassigns the booking to another doctor with availability.
-
-User gets a reschedule notification automatically — no manual calls needed.
-
-Key Goal:
-Automate regular appointments efficiently and reduce administrative workload.
-
-🤖 #Chatbot as Central Interface
-
-The chatbot acts as the main entry point for users.
-It doesn’t require typing — only button-based selections for simplicity:
-
-“Normal Appointment”
-
-“Urgent Appointment”
-
-“Very Urgent (Call Now)”
-
-The bot communicates with the AI Scheduler backend, checks doctor availability, and returns:
-
-Confirmation messages
-
-Call links (for Very Urgent)
-
-Notifications (for Urgent)
-
-Reschedule alerts (for Normal)
-Output Preview
-
-Normal Appointment: Schedules for next day
-
-Urgent Appointment: Notifies doctor for 2–4 hours slot
-
-Very Urgent Appointment: Generates instant Jitsi Meet call link
+---
 
 ## 🧩 Technologies Proposed
 
